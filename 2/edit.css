@@ -1,0 +1,41 @@
+@font-face {
+font-family: 'OT Neue Montreal Squeezed';
+  src: url('OTNeueMontreal-SemiBoldExtraSqueezed-copy.otf')format('opentype');
+}
+
+@font-face {
+font-family: 'CS Amias Ascii';
+  src: url('CSAmiasAscii-Regular_demo-BF6ac3685ed9e8e.otf')format('opentype');
+}
+
+@font-face {
+font-family: 'Snell Roundhand';
+  src: url('SnellRoundhand.ttc')format('truetype');
+}
+
+p{
+    font-family: 'OT Neue Montreal Squeezed';
+    font-size: 200px;
+    margin: 0; color:•#fff;
+    text-align: center;
+    padding: 10px;
+    border: 5px solid rgb(255, 253, 116);
+}
+
+h1{
+    font-family: 'Snell Roundhand';
+    font-size: 70px;
+    text-align: center;
+}
+
+h2{
+    font-family: 'CS Amias Ascii';
+    text-align: center;
+    font-size: 300px;
+    color: rgb(107, 254, 234);
+}
+
+h3{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
