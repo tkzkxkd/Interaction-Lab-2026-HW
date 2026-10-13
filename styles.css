@@ -1,0 +1,46 @@
+.square{
+    height: 200px;
+    width: 200px;
+    background-color: royalblue;
+    
+}
+
+.square:hover{
+    transform: rotate(30deg) scale(.5);
+    background-color: rgb(232, 22, 22);
+    filter: blur(25px);
+    transition-property: background-color, transform, filter;
+    transition-duration: 600ms;
+    transition-timing-function: ease-in-out;
+}
+
+@keyframes colors {
+    0%{
+        background-color: royalblue;
+    }
+
+    25%{
+        background-color: salmon;
+    }
+    
+    50%{
+        background-color: yellow;
+        transform: translate(500px);
+    }
+
+    100%{
+        background-color: seagreen;
+    }
+    
+}
+
+.circle{
+    height: 200px;
+    width: 200px;
+    background-color: springgreen;
+    border-radius: 100%;
+    animation-name: colors;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier();
+}

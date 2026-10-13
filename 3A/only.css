@@ -1,0 +1,110 @@
+.vertical-gradient-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-image {
+  z-index: 10;
+  max-width: 300px;
+  width: 80%;
+  height: auto;
+  filter: blur(3px) drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.15));
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.center-image:hover {
+  transform: scale(1.05); 
+  filter: blur(0px) drop-shadow(0px 15px 30px rgba(0, 0, 0, 0.25));
+  cursor: pointer; 
+}
+
+.vertical-gradient-container::before {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+  background: linear-gradient(to bottom, #000000, #ffffff);
+  animation: fadePulse 6s ease-in-out infinite alternate;
+  z-index: 1;
+}
+
+.vertical-gradient-container::after {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+  background: linear-gradient(to bottom, #ffffff, #000000);
+  z-index: 0;
+}
+
+@keyframes fadePulse {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.orbit-wrapper {
+  position: relative;
+  z-index: 10;
+  width: 300px;
+  max-width: 80vw;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --radius: min(320px, 48vw);
+}
+
+.orbit-wrapper .center-image {
+  width: 100%;
+  max-width: none;
+}
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  animation: orbitSpin 10s linear infinite;
+}
+
+@keyframes orbitSpin {
+  to { transform: rotate(360deg); }
+}
+
+.dot {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  margin: -11px 0 0 -11px;
+  border-radius: 50%;
+  background: #bafabb;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  transform: rotate(var(--angle)) translateX(var(--radius));
+}
+
+.dot:nth-child(1) { --angle: 0deg;   background: #bafabb; }
+.dot:nth-child(2) { --angle: 60deg;  background: #9ad7ff; }
+.dot:nth-child(3) { --angle: 120deg; background: #f7e48a; }
+.dot:nth-child(4) { --angle: 180deg; background: #bafabb; }
+.dot:nth-child(5) { --angle: 240deg; background: #9ad7ff; }
+.dot:nth-child(6) { --angle: 300deg; background: #f7e48a; }
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit { animation: none; }
+}
