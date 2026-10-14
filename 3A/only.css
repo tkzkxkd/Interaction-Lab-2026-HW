@@ -1,3 +1,9 @@
+*{
+  margin:0px;
+  box-sizing: border-box;
+}
+
+
 .vertical-gradient-container {
   position: relative;
   width: 100%;
