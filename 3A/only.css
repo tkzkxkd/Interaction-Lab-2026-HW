@@ -100,10 +100,10 @@
 
 .dot:nth-child(1) { --angle: 0deg;   background: #bafabb; }
 .dot:nth-child(2) { --angle: 60deg;  background: #9ad7ff; }
-.dot:nth-child(3) { --angle: 120deg; background: #f7e48a; }
+.dot:nth-child(3) { --angle: 120deg; background: #f3f499; }
 .dot:nth-child(4) { --angle: 180deg; background: #bafabb; }
 .dot:nth-child(5) { --angle: 240deg; background: #9ad7ff; }
-.dot:nth-child(6) { --angle: 300deg; background: #f7e48a; }
+.dot:nth-child(6) { --angle: 300deg; background: #f3f499; }
 
 @media (prefers-reduced-motion: reduce) {
   .orbit { animation: none; }
