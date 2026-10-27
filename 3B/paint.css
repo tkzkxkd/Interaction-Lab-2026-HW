@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: #f4f3ef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.painting {
+  width: 48vw;
+  aspect-ratio: 1.32;
+  padding: 0.5vw;
+  background: #111111;
+  box-shadow: 0 0.4vw 0.7vw rgba(0, 0, 0, 0.18);
+}
+
+.canvas {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  background-color: #b6b3a2;
+  background-image:
+    linear-gradient(to right, #77705e 0.5px, transparent 0.5px),
+    linear-gradient(to bottom, #77705e 0.5px, transparent 0.5px);
+
+  background-size: 10% 10%;
+}
+
+.yellow {
+  position: absolute;
+  left: 20%;
+  top: 0;
+  width: 30%;
+  height: 100%;
+  background: #b38d38;
+}
+
+.yellow-dark {
+  position: absolute;
+  left: 20%;
+  bottom: 0;
+  width: 30%;
+  height: 10%;
+  background: #c2a346;
+}
+
+.burgundy-vertical {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 11%;
+  height: 100%;
+  background: #351714;
+}
+
+.burgundy-horizontal {
+  position: absolute;
+  left: 61%;
+  top: 50%;
+  width: 39%;
+  height: 30%;
+  background: #351714;
+}
+
+.black-line {
+  position: absolute;
+  left: 0;
+  bottom: 9.2%;
+  width: 61%;
+  height: 0.2vw;
+  background: #000000;
+}
+
+.black-thin {
+  position: absolute;
+  left: 48.3%;
+  top: 50%;
+  width: 1.7%;
+  height: 56%;
+  background: #000000;
+}
+
+.black-thick {
+  position: absolute;
+  left: 60%;
+  bottom: 50%;
+  width: 2.5%;
+  height: 56%;
+  background: #000000;
+}
+
+.sphere {
+  position: absolute;
+  left: 36%;
+  top: 75%;
+  width: 8.5%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle at 35% 30%,
+    #d9d8d0 0%,
+    #bdbdb5 40%,
+    #888981 100%
+  );
+
+  box-shadow:
+    0.4vw 0.6vw 0.7vw rgba(0, 0, 0, 0.45),
+    0.7vw 1vw 1.5vw rgba(31, 30, 30, 0.3);
+}
