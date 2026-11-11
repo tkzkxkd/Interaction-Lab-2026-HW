@@ -1,0 +1,169 @@
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('PPNeueMontreal-Regular.otf') format('opentype');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #d8d6ff;
+    color: #2600ff;
+    font-family: 'PP Neue Montreal';
+}
+
+a {
+    color: #111;
+    text-decoration: none;
+}
+
+ul {
+    padding-left: 16px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    flex-shrink: 0;    
+    width: 320px;
+    height: 100vh;
+    text-align: center;
+}
+
+.lang {
+    margin-bottom: 40px;
+    font-family: 'PP Neue Montreal';
+    font-size: 12px;
+}
+
+.name {
+    margin-bottom: 20px;
+    font-size: 56px;
+    font-weight: normal;
+    line-height: 95%;
+}
+
+.subtitle {
+    margin-bottom: 50px;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 16px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    flex: 1;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 160px 100px 100px 20px;
+}
+
+.project {
+    display: flex;
+    gap: 50px;
+    align-items: stretch;
+}
+
+.window {
+    flex-shrink: 0;
+    align-self: flex-start;
+    width: 72%;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    transition: box-shadow 400ms ease;
+}
+
+.window:hover {
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 25px;
+    padding-left: 12px;
+    background-color: #e9e9e9;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.red { background-color: #ff5f57; }
+.yellow { background-color: #febc2e; }
+.green { background-color: #28c840; }
+
+.screen {
+    aspect-ratio: 2 / 1;
+    background-color: #ccc;
+}
+
+.screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info {
+    flex: 1;
+}
+
+.info h2 {
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.date {
+    margin-top: 6px;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.more {
+    height: 0;
+    overflow: visible;
+    margin-top: 20px;
+    font-size: 13px;
+    line-height: 140%;
+    opacity: 0;
+    transform: translateY(-6px);
+    pointer-events: none;
+    transition: opacity 400ms ease, transform 400ms ease;
+}
+
+.info:hover .more {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.more p {
+    margin-bottom: 16px;
+}
+
+.more li {
+    margin-bottom: 8px;
+}
+
+.tech {
+    font-style: italic;
+}
