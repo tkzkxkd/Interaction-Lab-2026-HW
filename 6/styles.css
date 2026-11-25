@@ -1,0 +1,93 @@
+@font-face {
+  font-family: 'Dedale';
+  src: url('DedaleTrial-205TF/DedaleTrial-Bold.otf') format('opentype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Wildest';
+  src: url('Wildest.otf') format('opentype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('helvetica-extra-boldd.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'UDMincho';
+  src: url('BIZUDMincho-Regular.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Impact';
+  src: url('Impact.ttf') format('truetype');
+  font-weight: 700;
+}
+
+* { box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+body {
+  background: #84389b;
+  font-family: 'Dedale', sans-serif;
+  font-weight: 700;
+}
+
+header { display: flex;
+  justify-content: space-between; 
+  padding: 30px; 
+  color: white; 
+}
+.logo { font-size: 200px; 
+  line-height: 0.8; }
+.info { font-size: 30px; 
+  width: 350px; 
+}
+.info p { margin-top: 30px; 
+  display: flex; 
+  justify-content: space-between; 
+}
+
+/* ───── 섹션 (전부 같은 양식 = 흰색 섹션 기준) ─────
+   h2 와 p 는 같은 폰트, 크기만 다름.
+   배경색/글자색/폰트는 index.html 의 각 섹션 style 에서 따로 바꿈 */
+.section {
+  position: relative;
+  display: block;
+  padding: 30px;
+  overflow: hidden;
+  text-decoration: none;
+  background: var(--bg, #fcfcf7);
+  color: var(--color, #161616);
+  font-family: var(--font, 'Dedale'), sans-serif;
+}
+.section h2 {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1.15;
+}
+.section p {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.15;
+  margin-top: 18px;
+}
+
+.section img { position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  opacity: 0; 
+}
+.section:hover img { opacity: 1; }
+.section:hover .text { opacity: 0; }
